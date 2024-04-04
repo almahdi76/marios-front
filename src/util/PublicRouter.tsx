@@ -4,6 +4,7 @@ import SignUp from "../pages/signup"
 import PublicLayout from "./PublicLayout"
 
 
+
 const PublicRouter = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const PublicRouter = () => {
       
       <Route path="" element={<Login />} />
       <Route path="logup" element={<SignUp />} />
+     
    
    </Route>
     </Routes>
