@@ -4,10 +4,12 @@ import './App.css';
 import PublicRouter from './util/PublicRouter';
 import Gardiant from './helper/Gardiant';
 import ProtectedRouter from './util/ProtectedRouter';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <h1>react</h1>
       <Routes>
         <Route path="/login/*" element={<PublicRouter />} />
