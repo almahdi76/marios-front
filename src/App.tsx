@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>react</h1>
+     
       <Routes>
         <Route path="/login/*" element={<PublicRouter />} />
         <Route index element={<PublicRouter />} />
