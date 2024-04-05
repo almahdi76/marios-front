@@ -6,7 +6,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
-  const [pizza,setPizza]=useState<Pizza[]>(mockDataPizza)
+  const [pizza,setPizza]=useState<Pizza[]>(mockDataPizza);
+  
   const navigate=useNavigate()
   useEffect(()=>{
    setPizza(mockDataPizza)
