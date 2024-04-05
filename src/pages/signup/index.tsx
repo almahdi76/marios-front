@@ -34,7 +34,7 @@ const SignUp = () => {
     onSubmit: (values) => {
       console.log("envoyer" + values);
       // handelChangeUser(values);
-      navigate("/");
+      navigate("/pizzas/succes");
     },
   });
   return (

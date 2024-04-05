@@ -95,8 +95,10 @@ const Login = () => {
              
             
 
-              <Link href="#" underline="none" >
-              <Typography sx={{ textAlign: "right",color:"#fbc02c" }} variant="body1">
+              <Link href="" underline="none" >
+              <Typography   onClick={() => {
+                  navigate("/login/logup");
+                }} sx={{ textAlign: "right",color:"#fbc02c" }} variant="body1">
                 Créer un compte
               {/* {t("common.msg")} */}
             </Typography>

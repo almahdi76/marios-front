@@ -1,7 +1,9 @@
 import { Box, Card, CardContent, Link } from '@mui/material'
 import MopedIcon from '@mui/icons-material/Moped';
+import { useNavigate } from 'react-router-dom';
 
 const Livraison = () => {
+  const navigate=useNavigate();
   return (
     <div style={{padding:'auto'}}>
     {/* minWidth: 275,maxWidth:"70%" */}
@@ -14,7 +16,9 @@ const Livraison = () => {
         <h2 >Votre commande est en preparation </h2>
         <MopedIcon  sx={{ fontSize: 140}}/>
        <h2 >Elle sera livrée en 30minutes.</h2>
-       <h2 ><Link style={{color:"#fbc02c"}}>Retoure à la page de commande</Link></h2>
+       <h2 ><Link  onClick={() => {
+                  navigate("/pizzas");
+                }} style={{color:"#fbc02c"}}>Retoure à la page de commande</Link></h2>
         </Box>
      
       </CardContent>
