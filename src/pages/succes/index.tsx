@@ -1,5 +1,5 @@
-import { Box, Card, CardContent, Link } from '@mui/material'
-import React from 'react'
+import {  Card, CardContent, Link } from '@mui/material'
+
 
 const Succes = () => {
   return (
