@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 
 import Validation from "../../service/SignInValidation";
 import "./loginstyle.css";
-import { Link } from "react-router-dom";
+import { Link } from "@mui/material";
 
 type props = {
   setIsLog: Function;
@@ -100,8 +100,9 @@ const Login = ({ setIsLog, setUtilisateut }: props) => {
                     <Link
                       className="link-underline-warning"
                       style={{ color: "#fbc02c", textAlign: "center" }}
-                      onClick={() => {}}
-                      to={"logup"}
+                      onClick={() => {
+                        navigate("/login/logup");
+                      }}
                     >
                       créer un compte
                     </Link>
@@ -112,7 +113,7 @@ const Login = ({ setIsLog, setUtilisateut }: props) => {
                     data-mdb-ripple-init
                     className="btn btn-primary btn-lg btn-block"
                     type="submit"
-                    style={{backgroundColor: "#fbc02c",color:"#3b438b"}}
+                    style={{ backgroundColor: "#fbc02c", color: "#3b438b" }}
                   >
                     Connextion
                   </button>

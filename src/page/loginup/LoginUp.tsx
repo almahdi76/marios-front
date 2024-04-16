@@ -58,7 +58,6 @@ const LoginUp = ({ setIsLog }: props) => {
         lastName: values.lastName,
         phonenumber: values.phonenumber,
         password: values.password,
-        rePassword: values.rePassword,
         address: values.address,
       })
         .then((response) => {
