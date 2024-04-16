@@ -1,19 +1,16 @@
+import { ReactElement } from "react";
+import { Navigate } from "react-router";
 
-import { ReactElement } from 'react'
-import { Navigate } from 'react-router-dom'
-type propsCh={
-    children:ReactElement
-}
-const Gardiant = ({children}:propsCh) => {
-    
-    let isLogged=false
-    // if(!ServiceLogin.isLogged()){
-        if(isLogged){
-        return < Navigate  to="/login"/>}
-    // }
-   
-    return children
+type propsCh = {
+  children: ReactElement;
+  isLog: boolean;
+};
+const Gardiant = ({ children, isLog }: propsCh) => {
+  if (!isLog) {
+    return <Navigate to="/login" />;
+  }
 
-  
-}
-export default Gardiant
+  return children;
+};
+
+export default Gardiant;

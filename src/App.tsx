@@ -1,27 +1,43 @@
+import { useState } from "react";
 
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import PublicRouter from './util/PublicRouter';
-import Gardiant from './helper/Gardiant';
-import ProtectedRouter from './util/ProtectedRouter';
+import { Route, Routes } from "react-router-dom";
+import Gardiant from "./helper/Gardiant";
+import PRouter from "./page/router/PublicRouter";
+import ARouter from "./page/router/ProtectedRouter";
+import Header from "./components/header";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [isLog, setIsLog] = useState(false);
+  const [utilisateur, setUtilisateut] = useState("");
+
   return (
-    <div className="App">
-      <h1>react</h1>
+    <div>
+      <Header />
+
       <Routes>
-        <Route path="/login/*" element={<PublicRouter />} />
-        <Route index element={<PublicRouter />} />
-      
-        <Route path="/pizzas/*" element={
+        <Route
+          path="/login/*"
+          element={
+            <PRouter setUtilisateut={setUtilisateut} setIsLog={setIsLog} />
+          }
+        />
+        <Route
+          index
+          element={
+            <PRouter setUtilisateut={setUtilisateut} setIsLog={setIsLog} />
+          }
+        />
 
-          <Gardiant> 
-        <ProtectedRouter />
-        </Gardiant>
-        } />
-
-      
-        </Routes>
+        <Route
+          path="/mpizza/*"
+          element={
+            <Gardiant isLog={isLog}>
+              <ARouter utilisateur={utilisateur} setIsLog={setIsLog} />
+            </Gardiant>
+          }
+        />
+      </Routes>
     </div>
   );
 }
